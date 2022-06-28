@@ -33,7 +33,6 @@ public class PatientDAOImpl implements PatientDAO {
                         .bean(p).name("nom").build();
                 prenom = JavaBeanObjectPropertyBuilder.create()
                         .bean(p).name("prenom").build();
-                // hack around losing weak references ...
                 properties.add(id);
                 properties.add(prenom);
                 properties.add(nom);
