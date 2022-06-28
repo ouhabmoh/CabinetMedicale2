@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<?import javafx.scene.text.Font?>
+<?import javafx.collections.FXCollections?>
+<AnchorPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="sample.Medcin.GererPatient.ModifierPatientController"
+            prefHeight="400.0" prefWidth="600.0">
+
+
+    <GridPane vgap="10" hgap="10">
+        <Label text="Nom: " GridPane.rowIndex="0" GridPane.columnIndex="0"/>
+        <TextField fx:id="nomChamp" GridPane.rowIndex="0" GridPane.columnIndex="1"/>
+
+        <Label text="Prenom: " GridPane.rowIndex="1" GridPane.columnIndex="0"/>
+        <TextField fx:id="prenomChamp" GridPane.rowIndex="1" GridPane.columnIndex="1"/>
+
+        <Label text="Date De Naissance: " GridPane.rowIndex="2" GridPane.columnIndex="0"/>
+        <DatePicker fx:id="dDNChamp" GridPane.rowIndex="2" GridPane.columnIndex="1"/>
+
+        <Label text="Email: " GridPane.rowIndex="3" GridPane.columnIndex="0"/>
+        <TextField fx:id="emailChamp" GridPane.rowIndex="3" GridPane.columnIndex="1"/>
+
+        <Label text="Adresse: " GridPane.rowIndex="4" GridPane.columnIndex="0"/>
+        <TextField fx:id="adresseChamp" GridPane.rowIndex="4" GridPane.columnIndex="1"/>
+
+        <Label text="Maladies: " GridPane.rowIndex="5" GridPane.columnIndex="0"/>
+        <TextField fx:id="maladiesChamp" GridPane.rowIndex="5" GridPane.columnIndex="1"/>
+
+        <Label text="Tel: " GridPane.rowIndex="6" GridPane.columnIndex="0"/>
+        <TextField fx:id="telChamp" GridPane.rowIndex="6" GridPane.columnIndex="1"/>
+
+        <Label text="Groupe Sang: " GridPane.rowIndex="7" GridPane.columnIndex="0"/>
+        <ComboBox GridPane.rowIndex="7" GridPane.columnIndex="1" fx:id="grSangChamp">
+            <items>
+                <FXCollections fx:factory="observableArrayList">
+                    <String fx:value="O+"/>
+                    <String fx:value="O-"/>
+                    <String fx:value="A+"/>
+                    <String fx:value="A-"/>
+                    <String fx:value="B+"/>
+                    <String fx:value="B-"/>
+                    <String fx:value="AB+"/>
+                    <String fx:value="AB-"/>
+                </FXCollections>
+            </items>
+            <value>
+                <String fx:value="O+"/>
+            </value>
+        </ComboBox>
+
+        <Label text="Poid: " GridPane.rowIndex="8" GridPane.columnIndex="0"/>
+        <TextField fx:id="poidChamp" GridPane.rowIndex="8" GridPane.columnIndex="1"/>
+
+        <Label text="Longueur: " GridPane.rowIndex="9" GridPane.columnIndex="0"/>
+        <TextField fx:id="longueurChamp" GridPane.rowIndex="9" GridPane.columnIndex="1"/>
+        <Label fx:id="lblErrors" GridPane.rowIndex="10" alignment="CENTER" layoutX="8.0" layoutY="135.0" prefHeight="23.0" prefWidth="275.0" textFill="#ff6354">
+            <font>
+                <Font name="Segoe UI" size="10.0" />
+            </font>
+        </Label>
+
+        <Button fx:id="okButton" onAction="#onButtonClicked" GridPane.rowIndex="11" GridPane.columnIndex="0" mnemonicParsing="false"  prefHeight="27.0" prefWidth="127.0" style="-fx-border-color: #2A73FF; " stylesheets="@../../styling/style.css" text="Ok">
+
+        </Button>
+
+        <Button fx:id="cancelButton" onAction="#onButtonClicked" GridPane.rowIndex="11" GridPane.columnIndex="1" mnemonicParsing="false"   prefHeight="27.0" prefWidth="127.0" style="-fx-border-color: #2A73FF;" stylesheets="@../../styling/style.css" text="Cancel">
+
+        </Button>
+
+    </GridPane>
+
+</AnchorPane>

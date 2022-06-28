@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.control.cell.*?>
+<?import javafx.scene.layout.*?>
+
+<?import javafx.scene.text.Font?>
+<AnchorPane prefHeight="716.0" prefWidth="605.0" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Medcin.GererOrdonnance.OrdonnanceController">
+    <GridPane>
+        
+        <Label text="Observation:" GridPane.columnIndex="0" GridPane.rowIndex="1" />
+        <TextArea fx:id="observation" prefHeight="150.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+         <GridPane.margin>
+            <Insets bottom="20.0" />
+         </GridPane.margin>
+         <padding>
+            <Insets top="10.0" />
+         </padding></TextArea>
+        <Separator GridPane.columnSpan="2" GridPane.rowIndex="2">
+         <GridPane.margin>
+            <Insets bottom="20.0" />
+         </GridPane.margin></Separator>
+        <Label text="Ajouter Un Medicament" GridPane.columnIndex="0" GridPane.rowIndex="3">
+         <padding>
+            <Insets bottom="10.0" />
+         </padding></Label>
+        <Label text="Medciament Nom:" GridPane.columnIndex="0" GridPane.rowIndex="4" />
+        <TextField fx:id="medicamentNom" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+        <Label text="Dose:" GridPane.columnIndex="0" GridPane.rowIndex="5" />
+        <TextField fx:id="dose" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+        <Label text="Astuce:" GridPane.columnIndex="0" GridPane.rowIndex="6" />
+        <TextField fx:id="astuce" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+        <Label text="Duration:" GridPane.columnIndex="0" GridPane.rowIndex="7" />
+        <TextField fx:id="duration" GridPane.columnIndex="1" GridPane.rowIndex="7" />
+        <Label fx:id="lblErrors" alignment="CENTER" layoutX="8.0" layoutY="135.0" prefHeight="23.0" prefWidth="275.0" textFill="#ff6354" GridPane.rowIndex="8">
+            <font>
+                <Font name="Segoe UI" size="10.0" />
+            </font>
+        </Label>
+      <columnConstraints>
+         <ColumnConstraints />
+         <ColumnConstraints />
+      </columnConstraints>
+      <rowConstraints>
+         <RowConstraints />
+         <RowConstraints />
+         <RowConstraints />
+         <RowConstraints />
+         <RowConstraints />
+         <RowConstraints />
+         <RowConstraints />
+      </rowConstraints>
+    </GridPane>
+    <AnchorPane layoutX="12.0" layoutY="356.0" maxHeight="575.0" prefHeight="351.0" prefWidth="582.0">
+        <HBox layoutX="234.0" prefHeight="27.0" prefWidth="310.0" style="-fx-background-color: #0A0E3F;-fx-border-radius: 20">
+            <Button mnemonicParsing="false" fx:id="ajouterMedicament" onAction="#ajouterMedicament" prefHeight="27.0" prefWidth="144.0" style="-fx-border-color: #2A73FF; -fx-border-radius: 20; -fx-background-color: transparent;" stylesheets="@../../styling/style.css" text="Ajouter Medicament">
+                <HBox.margin>
+                    <Insets right="20.0" />
+                </HBox.margin>
+            </Button>
+            <Button mnemonicParsing="false" onAction="#supprimerMedicament" prefHeight="27.0" prefWidth="144.0" style="-fx-border-color: #2A73FF; -fx-border-radius: 20; -fx-background-color: transparent;" stylesheets="@../../styling/style.css" text="Supprimer Medicament">
+                <HBox.margin>
+                    <Insets />
+                </HBox.margin>
+            </Button>
+        </HBox>
+
+        <TableView fx:id="MedicamentsList" layoutY="31.0" prefHeight="332.0" prefWidth="582.0">
+            <columns>
+                <TableColumn prefWidth="158.0" text="Nom">
+                    <cellValueFactory>
+                        <PropertyValueFactory property="nom" />
+                    </cellValueFactory>
+                </TableColumn>
+
+                <TableColumn prefWidth="92.0" text="Dose">
+                    <cellValueFactory>
+                        <PropertyValueFactory property="dose" />
+                    </cellValueFactory>
+                </TableColumn>
+
+                <TableColumn prefWidth="186.0" text="Astuce">
+                    <cellValueFactory>
+                        <PropertyValueFactory property="astuce" />
+                    </cellValueFactory>
+                </TableColumn>
+
+                <TableColumn  prefWidth="145.0" text="Duration">
+                    <cellValueFactory>
+                        <PropertyValueFactory property="duration" />
+                    </cellValueFactory>
+                </TableColumn>
+            </columns>
+        </TableView>
+
+    </AnchorPane>
+
+</AnchorPane>

@@ -1,0 +1,373 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.control.cell.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane fx:id="main" prefHeight="714.0" prefWidth="900.0" style="-fx-background-color: #0C3988" stylesheets="@../../styling/styleDossierMedicale.css" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Medcin.GererDossierMedicale.DossierMedicaleController">
+
+
+    <VBox prefHeight="174.0" prefWidth="888.0">
+
+
+        <HBox fillHeight="false" prefHeight="62.0" prefWidth="888.0">
+            <Label text="ID: ">
+                <font>
+                    <Font name="System " size="18.0" />
+                </font>
+                <HBox.margin>
+                    <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+                </HBox.margin>
+            </Label>
+            <Label id="value" fx:id="idChamp">
+                <HBox.margin>
+                    <Insets bottom="20.0" right="20.0" top="25.0" />
+                </HBox.margin>
+            </Label>
+
+
+            <Label text="Nom: ">
+                <font>
+                    <Font name="System " size="18.0" />
+                </font>
+                <HBox.margin>
+                    <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+                </HBox.margin>
+            </Label>
+            <Label id="value" fx:id="nomChamp">
+                <HBox.margin>
+                    <Insets bottom="20.0" right="20.0" top="25.0" />
+                </HBox.margin>
+            </Label>
+
+            <Label text="Prenom: ">
+                <font>
+                    <Font name="System " size="18.0" />
+                </font>
+                <HBox.margin>
+                    <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+                </HBox.margin>
+            </Label>
+            <Label id="value" fx:id="prenomChamp">
+                <HBox.margin>
+                    <Insets bottom="20.0" right="20.0" top="25.0" />
+                </HBox.margin>
+            </Label>
+
+            <Label text="Date De Naissance: ">
+                <font>
+                    <Font name="System " size="18.0" />
+                </font>
+                <HBox.margin>
+                    <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+                </HBox.margin>
+            </Label>
+            <Label id="value" fx:id="dDNChamp">
+                <HBox.margin>
+                    <Insets bottom="20.0" right="20.0" top="25.0" />
+                </HBox.margin>
+            </Label>
+        </HBox>
+<Separator />
+        <HBox prefHeight="60.0" prefWidth="888.0">
+
+            <Label text="Groupe Sang: ">
+                <font>
+                    <Font name="System " size="18.0" />
+                </font>
+                <HBox.margin>
+                    <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+                </HBox.margin>
+            </Label>
+            <Label id="value" fx:id="grSangChamp">
+                <HBox.margin>
+                    <Insets bottom="20.0" right="20.0" top="25.0" />
+                </HBox.margin>
+            </Label>
+
+            <Label text="Poid: ">
+                <font>
+                    <Font name="System " size="18.0" />
+                </font>
+                <HBox.margin>
+                    <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+                </HBox.margin>
+            </Label>
+            <Label id="value" fx:id="poidChamp">
+                <HBox.margin>
+                    <Insets bottom="20.0" right="20.0" top="25.0" />
+                </HBox.margin>
+            </Label>
+
+            <Label text="Longueur: ">
+                <font>
+                    <Font name="System " size="18.0" />
+                </font>
+                <HBox.margin>
+                    <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+                </HBox.margin>
+            </Label>
+            <Label id="value" fx:id="longueurChamp">
+                <HBox.margin>
+                    <Insets bottom="20.0" right="20.0" top="25.0" />
+                </HBox.margin>
+            </Label>
+
+            <Label text="Maladies: ">
+                <font>
+                    <Font name="System " size="18.0" />
+                </font>
+                <HBox.margin>
+                    <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+                </HBox.margin>
+            </Label>
+            <Label id="value" fx:id="maladiesChamp">
+                <HBox.margin>
+                    <Insets bottom="20.0" right="20.0" top="25.0" />
+                </HBox.margin>
+            </Label>
+        </HBox>
+        <Separator />
+
+        <HBox prefHeight="39.0" prefWidth="888.0">
+            <Label text="Email: ">
+                <font>
+                    <Font name="System " size="18.0" />
+                </font>
+                <HBox.margin>
+                    <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+                </HBox.margin>
+            </Label>
+            <Label id="value" fx:id="emailChamp">
+                <HBox.margin>
+                    <Insets bottom="20.0" right="20.0" top="25.0" />
+                </HBox.margin>
+            </Label>
+
+            <Label text="Adresse: ">
+                <font>
+                    <Font name="System " size="18.0" />
+                </font>
+                <HBox.margin>
+
+                    <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+                </HBox.margin>
+            </Label>
+            <Label id="value" fx:id="adresseChamp">
+                <HBox.margin>
+                    <Insets bottom="20.0" right="20.0" top="25.0" />
+                </HBox.margin>
+            </Label>
+
+
+            <Label text="Tel: ">
+                <font>
+                    <Font name="System " size="18.0" />
+                </font>
+                <HBox.margin>
+                    <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+                </HBox.margin>
+            </Label>
+            <Label id="value" fx:id="telChamp">
+                <HBox.margin>
+                    <Insets bottom="20.0" right="20.0" top="25.0" />
+                </HBox.margin>
+            </Label>
+
+
+        </HBox>
+        <Separator />
+
+    </VBox>
+   <BorderPane fx:id="ConsultationPane" layoutY="210.0" prefHeight="496.0" prefWidth="888.0">
+      <top>
+      <VBox prefHeight="65.0" prefWidth="888.0">
+          <HBox prefHeight="40.0" prefWidth="888.0" BorderPane.alignment="CENTER">
+              <Button mnemonicParsing="false" onAction="#afficherConsultation" prefHeight="27.0" prefWidth="144.0" style="-fx-border-color: #2A73FF; -fx-border-radius: 20; -fx-background-color: transparent;" stylesheets="@../../styling/style.css" text="Afficher Consultation">
+                  <HBox.margin>
+                      <Insets right="10.0" />
+                  </HBox.margin>
+              </Button>
+
+              <Button mnemonicParsing="false" onAction="#ajouterConsultation" prefHeight="27.0" prefWidth="147.0" style="-fx-border-color: #2A73FF; -fx-border-radius: 20; -fx-background-color: transparent;" stylesheets="@../../styling/style.css" text="Ajouter Un Consultation">
+                  <HBox.margin>
+                      <Insets right="10.0" />
+                  </HBox.margin>
+              </Button>
+              <Button mnemonicParsing="false" onAction="#modifierConsultation" prefHeight="27.0" prefWidth="134.0" style="-fx-border-color: #2A73FF; -fx-border-radius: 20; -fx-background-color: transparent;" stylesheets="@../../styling/style.css" text="Modifier Consultation">
+                  <HBox.margin>
+                      <Insets right="10.0" />
+                  </HBox.margin>
+              </Button>
+
+              <Button mnemonicParsing="false" onAction="#supprimerConsultation" prefHeight="27.0" prefWidth="146.0" style="-fx-border-color: #2A73FF; -fx-border-radius: 20; -fx-background-color: transparent;" stylesheets="@../../styling/style.css" text="Supprimer Consultation">
+                  <HBox.margin>
+                      <Insets right="10.0" />
+                  </HBox.margin>
+              </Button>
+              <BorderPane.margin>
+                  <Insets top="10.0" />
+              </BorderPane.margin>
+               <VBox.margin>
+                  <Insets bottom="10.0" />
+               </VBox.margin>
+          </HBox>
+          <HBox prefHeight="481.0" prefWidth="888.0">
+              <Button mnemonicParsing="false" onAction="#afficherOrdonnance" prefHeight="27.0" prefWidth="144.0" style="-fx-border-color: #2A73FF; -fx-border-radius: 20; -fx-background-color: transparent;" stylesheets="@../../styling/style.css" text="Afficher Ordonnance">
+                  <HBox.margin>
+                      <Insets right="10" />
+                  </HBox.margin>
+              </Button>
+              <Button mnemonicParsing="false" onAction="#ajouterOrdonnance" prefHeight="27.0" prefWidth="146.0" style="-fx-border-color: #2A73FF; -fx-border-radius: 20; -fx-background-color: transparent;" stylesheets="@../../styling/style.css" text="Ajoutr Ordonnance">
+                  <HBox.margin>
+                      <Insets right="10.0" />
+                  </HBox.margin>
+              </Button>
+              <Button mnemonicParsing="false" onAction="#modifierOrdonnance" prefHeight="27.0" prefWidth="146.0" style="-fx-border-color: #2A73FF; -fx-border-radius: 20; -fx-background-color: transparent;" stylesheets="@../../styling/style.css" text="Modifier Ordonnance">
+                  <HBox.margin>
+                      <Insets right="10.0" />
+                  </HBox.margin>
+              </Button>
+              <Button mnemonicParsing="false" onAction="#supprimerOrdonnance" prefHeight="27.0" prefWidth="146.0" style="-fx-border-color: #2A73FF; -fx-border-radius: 20; -fx-background-color: transparent;" stylesheets="@../../styling/style.css" text="Supprimer Ordonnance">
+                  <HBox.margin>
+                      <Insets right="10.0" />
+                  </HBox.margin>
+              </Button>
+               <VBox.margin>
+                  <Insets bottom="5.0" />
+               </VBox.margin>
+          </HBox>
+      </VBox>
+
+
+      </top>
+      <left>
+      
+          <Pane prefHeight="338.0" prefWidth="412.0" stylesheets="@../../styling/styleTable.css" BorderPane.alignment="CENTER">
+              <TableView fx:id="ConsultationsList" prefHeight="431.0" prefWidth="411.0">
+                  <columns>
+                      <TableColumn prefWidth="61.0" text="Code">
+                          <cellValueFactory>
+                              <PropertyValueFactory property="code" />
+                          </cellValueFactory>
+                      </TableColumn>
+      
+                      <TableColumn prefWidth="169.0" text="Traité Par">
+                          <cellValueFactory>
+                              <PropertyValueFactory property="medcin" />
+                          </cellValueFactory>
+                      </TableColumn>
+                      <TableColumn prefWidth="142.0" text="Date ">
+                          <cellValueFactory>
+                              <PropertyValueFactory property="date" />
+                          </cellValueFactory>
+                      </TableColumn>
+                  </columns>
+      
+              </TableView>
+          </Pane>
+      </left>
+      <right>
+         <Pane prefHeight="419.0" prefWidth="468.0" style="-fx-background-color: #02030A;" BorderPane.alignment="CENTER">
+             <HBox layoutX="5.0">
+                 <Label text="Code: ">
+                     <font>
+                         <Font name="System " size="18.0" />
+                     </font>
+                     <HBox.margin>
+                         <Insets bottom="20.0" right="20.0" top="20.0" />
+                     </HBox.margin>
+                 </Label>
+                 <Label id="value" fx:id="consultationCodeChamp" layoutX="48.0" layoutY="5.0">
+                     <HBox.margin>
+                         <Insets bottom="20.0" right="20.0" top="25.0" />
+                     </HBox.margin>
+                 </Label>
+             </HBox>
+      
+             <HBox layoutX="5.0" layoutY="67.0">
+                 <Label layoutX="5.0" text="Diagnostic: ">
+                     <font>
+                         <Font name="System " size="18.0" />
+                     </font>
+                     <HBox.margin>
+                         <Insets bottom="20.0" right="20.0" top="20.0" />
+                     </HBox.margin>
+                 </Label>
+                 <Label id="value" fx:id="diagnosticChamp" layoutX="48.0" layoutY="5.0" minHeight="50.0" minWidth="300.0">
+                     <HBox.margin>
+                         <Insets bottom="20.0" right="20.0" top="25.0" />
+                     </HBox.margin>
+                 </Label>
+             </HBox>
+             <HBox layoutX="5.0" layoutY="134.0">
+                 <Label layoutX="5.0" text="Maladies: ">
+                     <font>
+                         <Font name="System " size="18.0" />
+                     </font>
+                     <HBox.margin>
+                         <Insets bottom="20.0" right="20.0" top="20.0" />
+                     </HBox.margin>
+                 </Label>
+                 <Label id="value" fx:id="maladiesCChamp" layoutX="48.0" layoutY="5.0">
+                     <HBox.margin>
+                         <Insets bottom="20.0" top="25.0" />
+                     </HBox.margin>
+                 </Label>
+             </HBox>
+             <HBox layoutX="5.0" layoutY="201.0">
+                 <Label layoutX="5.0" text="Observation: ">
+                     <font>
+                         <Font name="System " size="18.0" />
+                     </font>
+                     <HBox.margin>
+                         <Insets bottom="20.0" right="20.0" top="20.0" />
+                     </HBox.margin>
+                 </Label>
+                 <Label id="value" fx:id="observationChamp" layoutX="48.0" layoutY="5.0">
+                     <HBox.margin>
+                         <Insets bottom="20.0" top="25.0" />
+                     </HBox.margin>
+                 </Label>
+             </HBox>
+             <HBox layoutX="5.0" layoutY="268.0">
+                 <Label layoutX="5.0" text="Montant payé: ">
+                     <font>
+                         <Font name="System " size="18.0" />
+                     </font>
+                     <HBox.margin>
+                         <Insets bottom="20.0" right="20.0" top="20.0" />
+                     </HBox.margin>
+                 </Label>
+                 <Label id="value" fx:id="montantPayeChamp" layoutX="48.0" layoutY="5.0">
+                     <HBox.margin>
+                         <Insets bottom="20.0" top="25.0" />
+                     </HBox.margin>
+                 </Label>
+             </HBox>
+             <HBox layoutX="5.0" layoutY="335.0" maxWidth="420.0">
+                 <Label layoutX="5.0" minWidth="50.0" text="Date: ">
+                     <font>
+                         <Font name="System " size="18.0" />
+                     </font>
+                     <HBox.margin>
+                         <Insets bottom="20.0" right="20.0" top="20.0" />
+                     </HBox.margin>
+                 </Label>
+                 <Label id="value" fx:id="dateCChamp" layoutX="48.0" layoutY="5.0" minWidth="50.0">
+                     <HBox.margin>
+                         <Insets bottom="20.0" top="25.0" />
+                     </HBox.margin>
+                 </Label>
+
+             </HBox>
+      
+      
+         </Pane>
+      </right>
+   </BorderPane>
+
+
+</AnchorPane>

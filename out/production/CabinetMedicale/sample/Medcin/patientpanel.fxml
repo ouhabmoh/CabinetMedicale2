@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<?import javafx.scene.control.cell.PropertyValueFactory?>
+<?import javafx.scene.text.Font?>
+<?import javafx.geometry.Insets?>
+<AnchorPane fx:id="mainPanel" xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="sample.Medcin.GererPatient.PatientController"
+            prefHeight="400.0" prefWidth="600.0">
+    <Pane fx:id="pnlPatient" prefHeight="200.0" prefWidth="200.0" >
+        <VBox layoutX="33.0" layoutY="21.0">
+            <Label text="Nom: " textFill="#e7e5e5">
+                <VBox.margin>
+                    <Insets bottom="10.0" />
+                </VBox.margin></Label>
+            <TextField fx:id="nomChamp">
+                <VBox.margin>
+                    <Insets bottom="10.0" />
+                </VBox.margin>
+            </TextField>
+
+            <Label text="Prenom: " textFill="#e7e5e5">
+                <VBox.margin>
+                    <Insets bottom="10.0" />
+                </VBox.margin>
+            </Label>
+            <TextField fx:id="prenomChamp" />
+            <Button mnemonicParsing="false" onAction="#chercherPatient" prefHeight="32.0" prefWidth="134.0" style="-fx-border-color: #2A73FF; -fx-border-radius: 20; -fx-background-color: transparent;" stylesheets="@../styling/style.css" text="Chercher Patient">
+                <VBox.margin>
+                    <Insets left="15.0" top="10.0" />
+                </VBox.margin>
+                <font>
+                    <Font size="14.0" />
+                </font></Button>
+
+        </VBox>
+        <HBox layoutX="192.0" layoutY="123.0" prefHeight="32.0" prefWidth="601.0">
+
+            <Button mnemonicParsing="false" onAction="#ajouterPatient" prefHeight="32.0" prefWidth="116.0" style="-fx-border-color: #2A73FF; -fx-border-radius: 20; -fx-background-color: transparent;" stylesheets="@../styling/style.css" text="Ajouter Patient">
+                <HBox.margin>
+                    <Insets right="10" />
+                </HBox.margin>
+                <font>
+                    <Font size="14.0" />
+                </font>
+            </Button>
+
+
+            <Button mnemonicParsing="false" onAction="#modifierPatient" prefHeight="32.0" prefWidth="126.0" style="-fx-border-color: #2A73FF; -fx-border-radius: 20; -fx-background-color: transparent;" stylesheets="@../styling/style.css" text="Modifier Patient">
+                <HBox.margin>
+                    <Insets right="10" />
+                </HBox.margin>
+                <font>
+                    <Font size="14.0" />
+                </font>
+            </Button>
+
+
+            <Button mnemonicParsing="false" onAction="#afficherDossierMedicale" prefHeight="32.0" prefWidth="197.0" style="-fx-border-color: #2A73FF; -fx-border-radius: 20; -fx-background-color: transparent;" stylesheets="@../styling/style.css" text="Afficher Le Dossier Medicale">
+                <HBox.margin>
+                    <Insets right="10" />
+                </HBox.margin>
+                <font>
+                    <Font size="14.0" />
+                </font>
+            </Button>
+
+            <Button mnemonicParsing="false" onAction="#supprimerPatient" prefHeight="32.0" prefWidth="137.0" style="-fx-border-color: #2A73FF; -fx-border-radius: 20; -fx-background-color: transparent;" stylesheets="@../styling/style.css" text="Supprimer Patient">
+                <font>
+                    <Font size="14.0" />
+                </font></Button>
+
+
+        </HBox>
+        <HBox alignment="CENTER_LEFT" layoutX="5.0" layoutY="184.0" prefHeight="392.0" prefWidth="787.0" spacing="80.0" style="-fx-background-color: #0C39FF;" stylesheets="@../styling/styleTable.css">
+            <children>
+
+                <TableView fx:id="PatientsList" prefHeight="362.0" prefWidth="793.0">
+                    <columns>
+                        <TableColumn prefWidth="61.0" text="Id">
+                            <cellValueFactory>
+                                <PropertyValueFactory property="id" />
+                            </cellValueFactory>
+                        </TableColumn>
+                        <TableColumn prefWidth="99.0" text="Nom">
+                            <cellValueFactory>
+                                <PropertyValueFactory property="nom" />
+                            </cellValueFactory>
+                        </TableColumn>
+
+                        <TableColumn prefWidth="104.0" text="Prenom">
+                            <cellValueFactory>
+                                <PropertyValueFactory property="prenom" />
+                            </cellValueFactory>
+                        </TableColumn>
+                        <TableColumn prefWidth="108.0" text="Date De Naissance">
+                            <cellValueFactory>
+                                <PropertyValueFactory property="dateDeNaissance" />
+                            </cellValueFactory>
+                        </TableColumn>
+                        <TableColumn prefWidth="103.0" text="Adresse">
+                            <cellValueFactory>
+                                <PropertyValueFactory property="adresse" />
+                            </cellValueFactory>
+                        </TableColumn>
+                        <TableColumn prefWidth="169.0" text="Maladies">
+                            <cellValueFactory>
+                                <PropertyValueFactory property="maladies" />
+                            </cellValueFactory>
+                        </TableColumn>
+                        <TableColumn prefWidth="142.0" text="Date De 1er Consultaion">
+                            <cellValueFactory>
+                                <PropertyValueFactory property="date1" />
+                            </cellValueFactory>
+                        </TableColumn>
+                    </columns>
+
+                </TableView>
+            </children>
+        </HBox>
+    </Pane>
+</AnchorPane>

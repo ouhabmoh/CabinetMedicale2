@@ -1,0 +1,9 @@
+.label{
+    -fx-text-fill: #e7e5e5;
+}
+
+#value{
+
+    -fx-font: 12px "System";
+}
+

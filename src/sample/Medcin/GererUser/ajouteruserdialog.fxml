@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<?import javafx.scene.text.Font?>
+<AnchorPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="sample.Medcin.GererUser.AjouterUserController"
+            prefHeight="400.0" prefWidth="600.0">
+    <GridPane vgap="10" hgap="10">
+        <Label text="Username: " GridPane.rowIndex="0" GridPane.columnIndex="0"/>
+        <TextField fx:id="usernameChamp" GridPane.rowIndex="0" GridPane.columnIndex="1"/>
+
+        <Label text="Mot De Passe: " GridPane.rowIndex="1" GridPane.columnIndex="0"/>
+        <PasswordField fx:id="motDePasse" GridPane.rowIndex="1" GridPane.columnIndex="1"/>
+
+        <Label text="Confirmation: " GridPane.rowIndex="2" GridPane.columnIndex="0"/>
+        <PasswordField fx:id="motDePasse2" GridPane.rowIndex="2" GridPane.columnIndex="1"/>
+
+        <Label text="Role: " GridPane.rowIndex="3" GridPane.columnIndex="0"/>
+        <fx:define >
+            <ToggleGroup fx:id="roleChamp"/>
+        </fx:define>
+        <RadioButton text="medcin" fx:id="medcin" selected="true"  toggleGroup="$roleChamp" GridPane.rowIndex="3" GridPane.columnIndex="1"/>
+        <RadioButton text="secretaire" fx:id="secretaire" toggleGroup="$roleChamp" GridPane.rowIndex="3" GridPane.columnIndex="2"/>
+
+        <Label text="Nom: " GridPane.rowIndex="4" GridPane.columnIndex="0"/>
+        <TextField fx:id="nomChamp" GridPane.rowIndex="4" GridPane.columnIndex="1"/>
+
+        <Label text="Prenom: " GridPane.rowIndex="5" GridPane.columnIndex="0"/>
+        <TextField fx:id="prenomChamp" GridPane.rowIndex="5" GridPane.columnIndex="1"/>
+
+        <Label text="Date De Naissance: " GridPane.rowIndex="6" GridPane.columnIndex="0"/>
+        <DatePicker fx:id="dDNChamp" GridPane.rowIndex="6" GridPane.columnIndex="1"/>
+
+        <Label text="Email: " GridPane.rowIndex="7" GridPane.columnIndex="0"/>
+        <TextField fx:id="emailChamp" GridPane.rowIndex="7" GridPane.columnIndex="1"/>
+
+        <Label text="Adresse: " GridPane.rowIndex="8" GridPane.columnIndex="0"/>
+        <TextField fx:id="adresseChamp" GridPane.rowIndex="8" GridPane.columnIndex="1"/>
+
+        <Label text="Tel: " GridPane.rowIndex="9" GridPane.columnIndex="0"/>
+        <TextField fx:id="telChamp" GridPane.rowIndex="9" GridPane.columnIndex="1"/>
+        <Label GridPane.rowIndex="10" GridPane.columnIndex="0" fx:id="lblErrors" alignment="CENTER" layoutX="8.0" layoutY="135.0" prefHeight="23.0" prefWidth="275.0" textFill="#ff6354">
+            <font>
+                <Font name="Segoe UI" size="10.0" />
+            </font>
+        </Label>
+
+        <Button fx:id="okButton" onAction="#onButtonClicked" GridPane.rowIndex="11" GridPane.columnIndex="0" mnemonicParsing="false"  prefHeight="27.0" prefWidth="127.0" style="-fx-border-color: #2A73FF; " stylesheets="@../../styling/style.css" text="Ok">
+
+        </Button>
+
+        <Button fx:id="cancelButton" onAction="#onButtonClicked" GridPane.rowIndex="11" GridPane.columnIndex="1" mnemonicParsing="false"   prefHeight="27.0" prefWidth="127.0" style="-fx-border-color: #2A73FF;" stylesheets="@../../styling/style.css" text="Cancel">
+
+        </Button>
+
+    </GridPane>
+</AnchorPane>

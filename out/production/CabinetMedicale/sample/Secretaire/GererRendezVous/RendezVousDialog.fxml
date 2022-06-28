@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.collections.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Secretaire.GererRendezVous.RendezVousController">
+
+    <GridPane hgap="10" vgap="10">
+
+        <Label text="Nom: " GridPane.columnIndex="0" GridPane.rowIndex="0" />
+        <TextField fx:id="nomChamp" GridPane.columnIndex="1" GridPane.rowIndex="0" />
+
+        <Label text="Prenom: " GridPane.columnIndex="0" GridPane.rowIndex="1" />
+        <TextField fx:id="prenomChamp" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+
+
+        <Label text="Date " GridPane.columnIndex="0" GridPane.rowIndex="2" />
+        <DatePicker fx:id="dateChamp" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+
+        <Label text="Heure" GridPane.columnIndex="0" GridPane.rowIndex="3" />
+        <ComboBox GridPane.columnIndex="1" GridPane.rowIndex="3" fx:id="heure">
+            <items>
+                <FXCollections fx:factory="observableArrayList">
+                    <String fx:value="00" />
+                    <String fx:value="01" />
+                    <String fx:value="02" />
+                    <String fx:value="03" />
+                    <String fx:value="04" />
+                    <String fx:value="05" />
+                    <String fx:value="06" />
+                    <String fx:value="07" />
+                    <String fx:value="08" />
+                    <String fx:value="09" />
+                    <String fx:value="10" />
+                    <String fx:value="11" />
+                    <String fx:value="12" />
+                    <String fx:value="13" />
+                    <String fx:value="14" />
+                    <String fx:value="15" />
+                    <String fx:value="16" />
+                    <String fx:value="17" />
+                    <String fx:value="18" />
+                    <String fx:value="19" />
+                    <String fx:value="20" />
+                    <String fx:value="21" />
+                    <String fx:value="22" />
+                    <String fx:value="23" />
+
+
+
+                </FXCollections>
+            </items>
+            <value>
+                <String fx:value="08" />
+            </value>
+        </ComboBox>
+
+        <ComboBox GridPane.columnIndex="1" GridPane.rowIndex="3" fx:id="min">
+            <items>
+                <FXCollections fx:factory="observableArrayList">
+                    <String fx:value="00" />
+                    <String fx:value="15" />
+                    <String fx:value="30" />
+                    <String fx:value="45" />
+
+
+                </FXCollections>
+            </items>
+            <value>
+                <String fx:value="00" />
+            </value>
+         <GridPane.margin>
+            <Insets left="70.0" />
+         </GridPane.margin>
+        </ComboBox>
+      <columnConstraints>
+         <ColumnConstraints />
+         <ColumnConstraints />
+      </columnConstraints>
+      <rowConstraints>
+         <RowConstraints />
+         <RowConstraints />
+         <RowConstraints />
+         <RowConstraints />
+      </rowConstraints>
+
+    </GridPane>
+
+</AnchorPane>

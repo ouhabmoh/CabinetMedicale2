@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<?import javafx.scene.text.Font?>
+<AnchorPane fx:id="main1" prefHeight="649.0" prefWidth="622.0" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Medcin.GererConsultation.ConsultationController">
+
+        <GridPane hgap="20" layoutY="8.0" prefHeight="623.0" prefWidth="622.0" vgap="15">
+
+            <Label text="Diagnostic: " GridPane.columnIndex="0" GridPane.rowIndex="0" />
+            <TextArea fx:id="diagnosticChamp" prefHeight="250.0" prefWidth="478.0" GridPane.columnIndex="1" GridPane.rowIndex="0" />
+
+            <Label text="Maladies: " GridPane.columnIndex="0" GridPane.rowIndex="2" />
+            <TextField fx:id="maladiesChamp" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+
+            <Label text="Observation: " GridPane.columnIndex="0" GridPane.rowIndex="3" />
+            <TextArea fx:id="observationChamp" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+
+            <Label text="Montant Payé: " GridPane.columnIndex="0" GridPane.rowIndex="4" />
+            <TextField fx:id="montantPayeChamp" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+
+            <Label text="Date: " GridPane.columnIndex="0" GridPane.rowIndex="5" />
+            <DatePicker fx:id="dateChamp" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+
+            <Label fx:id="lblErrors" alignment="CENTER" layoutX="8.0" layoutY="135.0" prefHeight="23.0" prefWidth="275.0" textFill="#ff6354">
+                <font>
+                    <Font name="Segoe UI" size="10.0" />
+                </font>
+            </Label>
+
+            <Button onAction="#ajouterOrdonnance" text="Ajouter Ordonnance" GridPane.columnIndex="0" GridPane.rowIndex="6" />
+      <columnConstraints>
+         <ColumnConstraints />
+         <ColumnConstraints />
+      </columnConstraints>
+      <rowConstraints>
+         <RowConstraints />
+         <RowConstraints />
+         <RowConstraints />
+         <RowConstraints />
+         <RowConstraints />
+         <RowConstraints />
+         <RowConstraints />
+      </rowConstraints>
+
+
+
+
+
+        </GridPane>
+   
+</AnchorPane>

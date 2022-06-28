@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<?import javafx.scene.control.cell.PropertyValueFactory?>
+<?import javafx.scene.text.Font?>
+<?import javafx.geometry.Insets?>
+<AnchorPane fx:id="mainPanel" xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="sample.Medcin.GererUser.UserController"
+            prefHeight="400.0" prefWidth="600.0">
+
+    <Pane fx:id="pnlUser" prefHeight="200.0" prefWidth="200.0" >
+        <HBox layoutX="190.0" layoutY="123.0" prefHeight="32.0" prefWidth="590.0">
+
+            <Button mnemonicParsing="false" onAction="#ajouterUser" prefHeight="27.0" prefWidth="108.0" style="-fx-border-color: #2A73FF; -fx-border-radius: 20; -fx-background-color: transparent;" stylesheets="@../styling/style.css" text="Ajouter User">
+                <HBox.margin>
+                    <Insets right="10" />
+                </HBox.margin>
+                <font>
+                    <Font size="14.0" />
+                </font>
+            </Button>
+
+
+            <Button mnemonicParsing="false" onAction="#modifierUser" prefHeight="27.0" prefWidth="109.0" style="-fx-border-color: #2A73FF; -fx-border-radius: 20; -fx-background-color: transparent;" stylesheets="@../styling/style.css" text="Modifier User">
+                <HBox.margin>
+                    <Insets right="10" />
+                </HBox.margin>
+                <font>
+                    <Font size="14.0" />
+                </font>
+            </Button>
+
+
+            <!--                        <Button mnemonicParsing="false" onAction="#afficherUser" prefHeight="32.0" prefWidth="225.0" style="-fx-border-color: #2A73FF; -fx-border-radius: 20; -fx-background-color: transparent;" stylesheets="@../styling/style.css" text="Afficher Les Information De User">-->
+            <!--                            <HBox.margin>-->
+            <!--                                <Insets right="10" />-->
+            <!--                            </HBox.margin>-->
+            <!--                     <font>-->
+            <!--                        <Font size="14.0" />-->
+            <!--                     </font>-->
+            <!--                        </Button>-->
+
+            <Button mnemonicParsing="false" onAction="#supprimerUser" prefHeight="27.0" prefWidth="127.0" style="-fx-border-color: #2A73FF; -fx-border-radius: 20; -fx-background-color: transparent;" stylesheets="@../styling/style.css" text="Supprimer User">
+                <font>
+                    <Font size="14.0" />
+                </font></Button>
+
+
+        </HBox>
+        <HBox alignment="CENTER_LEFT" layoutX="-1.0" layoutY="178.0" prefHeight="400.0" prefWidth="793.0" spacing="80.0" style="-fx-background-color: #0C39FF;" stylesheets="@../styling/styleTable.css">
+            <children>
+
+                <TableView fx:id="UsersList" prefHeight="380.0" prefWidth="793.0">
+                    <columns>
+                        <TableColumn prefWidth="61.0" text="Id">
+                            <cellValueFactory>
+                                <PropertyValueFactory property="id" />
+                            </cellValueFactory>
+                        </TableColumn>
+                        <TableColumn prefWidth="150.0" text="Username">
+                            <cellValueFactory>
+                                <PropertyValueFactory property="pseudo" />
+                            </cellValueFactory>
+                        </TableColumn>
+                        <TableColumn prefWidth="150.0" text="Nom">
+                            <cellValueFactory>
+                                <PropertyValueFactory property="nom" />
+                            </cellValueFactory>
+                        </TableColumn>
+
+                        <TableColumn prefWidth="150.0" text="Prenom">
+                            <cellValueFactory>
+                                <PropertyValueFactory property="prenom" />
+                            </cellValueFactory>
+                        </TableColumn>
+                        <TableColumn prefWidth="120.0" text="Role">
+                            <cellValueFactory>
+                                <PropertyValueFactory property="role" />
+                            </cellValueFactory>
+                        </TableColumn>
+                    </columns>
+
+                </TableView>
+            </children>
+        </HBox>
+    </Pane>
+</AnchorPane>

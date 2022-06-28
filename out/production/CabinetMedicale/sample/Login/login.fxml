@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="503.0" prefWidth="854.0" style="-fx-background-color: #fff;" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/10.0.2-internal" fx:controller="sample.Login.LoginController">
+<children>
+    <AnchorPane prefHeight="503.0" prefWidth="382.0" style="-fx-background-color: #0C39FF;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <children>
+<ImageView fitHeight="52.0" fitWidth="52.0" layoutX="166.0" layoutY="179.0" pickOnBounds="true" preserveRatio="true">
+    <image>
+
+    </image>
+</ImageView>
+    <Label alignment="CENTER" layoutX="105.0" layoutY="262.0" prefHeight="23.0" prefWidth="173.0" text="Cabinet Medicale" textFill="WHITE">
+        <font>
+            <Font name="Segoe UI" size="18.0" />
+        </font>
+    </Label>
+    <Label alignment="CENTER" layoutX="89.0" layoutY="295.0" prefHeight="23.0" prefWidth="205.0" text="Traiter et Soigner" textFill="WHITE">
+        <font>
+            <Font name="Segoe UI" size="12.0" />
+        </font>
+    </Label>
+</children>
+</AnchorPane>
+<Pane layoutX="488.0" layoutY="100.0" AnchorPane.bottomAnchor="73.0" AnchorPane.topAnchor="100.0">
+<children>
+ <Label layoutX="7.0" layoutY="10" text="Pseudo" />
+<TextField fx:id="txtUsername" layoutX="7.0" layoutY="30" prefHeight="34.0" prefWidth="275.0" promptText="username or email" />
+    <Label layoutX="7.0" layoutY="80.0" text="Mot de Passe" />
+    <PasswordField fx:id="txtPassword" layoutX="7.0" layoutY="100.0" prefHeight="34.0" prefWidth="275.0" promptText="password" stylesheets="@../styling/fullpackstyling.css" />
+    <Button fx:id="btnSignin" defaultButton="true" layoutX="40.0" layoutY="165.0" mnemonicParsing="false" onMouseClicked="#handleButtonAction" prefHeight="34.0" prefWidth="220.0" stylesheets="@../styling/fullpackstyling.css" text="Sign in" />
+
+
+    <Label fx:id="lblErrors" alignment="CENTER" layoutX="8.0" layoutY="135.0" prefHeight="23.0" prefWidth="275.0" textFill="#ff6354">
+        <font>
+            <Font name="Segoe UI" size="10.0" />
+        </font>
+    </Label>
+
+
+</children>
+</Pane>
+
+
+</children>
+</AnchorPane>
